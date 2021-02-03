@@ -9,9 +9,7 @@
         Title="MVVM Tutorial" Height="450" Width="800">
     <Grid>
 
-        <!--The Main Window loads the view in combination with "Loaded" procedure in Main Window Code-->
         <views:StudentView x:Name="StudentViewControl"/>
-        <!--Loaded="StudentViewControl_Loaded"/>-->
-        <!--============================ As in Chapter 4====Chapter 5 No "Loaded" part =============-->
+
     </Grid>
 </Window>
