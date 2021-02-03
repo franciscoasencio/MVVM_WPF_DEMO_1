@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using MVVMDemo.ViewModel;
+using System.Windows.Controls;
 
 namespace MVVMDemo.Views
 {
@@ -10,6 +11,7 @@ namespace MVVMDemo.Views
         public StudentView()
         {
             InitializeComponent();
+            this.DataContext = new StudentViewModel();
         }
     }
 }
