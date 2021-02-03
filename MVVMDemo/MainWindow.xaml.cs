@@ -13,22 +13,14 @@ namespace MVVMDemo
             InitializeComponent();
         }
 
-        //private void StudentViewControl_Loaded(object sender, RoutedEventArgs e)
-        //{
-        //    ViewModel.StudentViewModel studentViewModelObject = new ViewModel.StudentViewModel();
-        //    studentViewModelObject.LoadStudents();
-        //    StudentViewControl.DataContext = studentViewModelObject;
-        //}
-
-
-
-        private void TeacherViewControl_Loaded(object sender, RoutedEventArgs e)
+        // as in chapter 4 , this is the "Loaded" instruction executed
+        private void StudentViewControl_Loaded(object sender, RoutedEventArgs e)
         {
-            ViewModel.TeacherViewModel teacherViewModelObject = new ViewModel.TeacherViewModel();
-            teacherViewModelObject.LoadTeachers();
-            TeacherViewControl.DataContext = teacherViewModelObject;
+            ViewModel.StudentViewModel studentViewModelObject = new ViewModel.StudentViewModel();
+            studentViewModelObject.LoadStudents();
+            StudentViewControl.DataContext = studentViewModelObject;
         }
-
+        //=================================================================
 
     }
 }
