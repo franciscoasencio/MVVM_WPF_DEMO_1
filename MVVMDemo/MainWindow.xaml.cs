@@ -20,6 +20,8 @@ namespace MVVMDemo
         //    StudentViewControl.DataContext = studentViewModelObject;
         //}
 
+
+
         private void TeacherViewControl_Loaded(object sender, RoutedEventArgs e)
         {
             ViewModel.TeacherViewModel teacherViewModelObject = new ViewModel.TeacherViewModel();
