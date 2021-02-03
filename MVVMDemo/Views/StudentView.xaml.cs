@@ -8,7 +8,6 @@ namespace MVVMDemo.Views
         public StudentView()
         {
             InitializeComponent();
-            //this.DataContext = new StudentViewModel();
         }
     }
 }
