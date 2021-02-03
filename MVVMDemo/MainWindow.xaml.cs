@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MVVMDemo.ViewModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MVVMDemo
 {
@@ -24,13 +12,21 @@ namespace MVVMDemo
         {
             InitializeComponent();
         }
-        private void StudentViewControl_Loaded(object sender, RoutedEventArgs e)
+
+        //private void StudentViewControl_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    ViewModel.StudentViewModel studentViewModelObject = new ViewModel.StudentViewModel();
+        //    studentViewModelObject.LoadStudents();
+        //    StudentViewControl.DataContext = studentViewModelObject;
+        //}
+
+        private void TeacherViewControl_Loaded(object sender, RoutedEventArgs e)
         {
-            MVVMDemo.ViewModel.StudentViewModel studentViewModelObject = new
-            MVVMDemo.ViewModel.StudentViewModel();
-            studentViewModelObject.LoadStudents();
-            StudentViewControl.DataContext = studentViewModelObject;
+            ViewModel.TeacherViewModel teacherViewModelObject = new ViewModel.TeacherViewModel();
+            teacherViewModelObject.LoadTeachers();
+            TeacherViewControl.DataContext = teacherViewModelObject;
         }
+
 
     }
 }

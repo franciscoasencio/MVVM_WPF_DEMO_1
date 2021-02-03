@@ -1,11 +1,17 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace MVVMDemo.Model
 {
-    public class StudentModel
+    public class TeacherModel
     {
     }
 
-    public class Student : INotifyPropertyChanged
+    public class Teacher : INotifyPropertyChanged
     {
         private string firstName;
         private string lastName;
@@ -13,7 +19,8 @@ namespace MVVMDemo.Model
         public string FirstName
         {
             get { return firstName; }
-            set
+
+            set 
             {
                 if (firstName != value)
                 {
@@ -27,12 +34,13 @@ namespace MVVMDemo.Model
         public string LastName
         {
             get { return lastName; }
+
             set
             {
                 if (lastName != value)
                 {
                     lastName = value;
-                    RaisePropertyChanged("LastName");
+                    RaisePropertyChanged("FlastName");
                     RaisePropertyChanged("FullName");
                 }
             }
@@ -40,10 +48,7 @@ namespace MVVMDemo.Model
 
         public string FullName
         {
-            get
-            {
-                return firstName + " " + lastName;
-            }
+            get { return firstName + " " + lastName; }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -55,6 +60,5 @@ namespace MVVMDemo.Model
                 PropertyChanged(this, new PropertyChangedEventArgs(property));
             }
         }
-
     }
 }
